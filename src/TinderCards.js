@@ -16,10 +16,15 @@ function TinderCards() {
     // },
   ]);
   useEffect(() => {
-    db.collection("people").onSnapshot((snapshot) =>
-      setPeople(snapshot.docs.map((doc) => doc.data()))
-    );
-  });
+    const unsubscribe = db
+      .collection("people")
+      .onSnapshot((snapshot) =>
+        setPeople(snapshot.docs.map((doc) => doc.data()))
+      );
+    return () => {
+      unsubscribe();
+    };
+  }, []);
   return (
     <div className="Tindercards__cardContainer">
       {People.map((person) => (

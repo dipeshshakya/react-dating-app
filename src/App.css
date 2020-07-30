@@ -1,6 +1,10 @@
 * {
   margin: 0px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .Header {
   display: flex;
   justify-content: space-between;
@@ -71,4 +75,72 @@
 .swipeButton_flash {
   padding: 3vw !important;
   color: #915dd1 !important;
+}
+/* chat component */
+.chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70px;
+  border-bottom: 1px solid #fafafa;
+}
+.chat__details {
+  flex: 1;
+}
+.chat__details > p {
+  color: gray;
+}
+.chat_img {
+  margin-right: 20px;
+}
+.chat__timestamp {
+  color: lightgray;
+}
+/* chatScreen */
+.chatScreen__message {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+.chatScreen__text {
+  margin-left: 5px;
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20px;
+}
+.chatScreen__timestamp {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+.chatScreen__textUser {
+  margin-left: auto;
+  background-color: #29b3cd;
+  padding: 15px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+/* chatScreen form */
+.chatScreen__form > form{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 5px;
+  border-top: 1px solid lightgray;
+}
+
+.chatScreen__inputField {
+  padding: 10px;
+  border: none;
+  width: 80%;
+}
+.chatscreen__button {
+  border: none;
+  background-color: #ffffff;
+  color: #ec5e6f;
+  margin-right: 20px;
+  font-weight: bolder;
+  width: 20%;
 }
